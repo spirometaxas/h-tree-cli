@@ -1,0 +1,31 @@
+{
+  "name": "h-tree-cli",
+  "version": "0.0.1",
+  "description": "Print the H-Tree fractal to the console!",
+  "main": "./src/index.js",
+  "bin": {
+    "h-tree-cli": "./src/cli.js"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spirometaxas/h-tree-cli.git"
+  },
+  "scripts": {
+    "cli": "node ./src/cli.js"
+  },
+  "author": "Spiro Metaxas",
+  "license": "MIT",
+  "keywords": [ 
+    "H-Tree", 
+    "fractals", 
+    "h-tree-cli", 
+    "cli",
+    "console",
+    "terminal",
+    "shell",
+    "unicode" 
+  ]
+}

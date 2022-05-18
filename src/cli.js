@@ -1,4 +1,32 @@
 #!/usr/bin/env node
 const h_tree = require('./index.js');
 
-console.log(h_tree);
+const printUsage = function() {
+    console.log('\nUsage:\n' + '  $ h-tree-cli <n>\n' + '  $ h-tree-cli <n> <size>\n');
+}
+
+if (process.argv.length > 2) {
+    const params = process.argv.slice(2);
+    if (params[0] && !isNaN(params[0]) && parseInt(params[0]) >= 0) {
+        var n = parseInt(params[0]);
+        var s = undefined;
+        if (params[1]) {
+            if (!isNaN(params[1]) && parseInt(params[1]) >= n) {
+                s = parseInt(params[1]);
+            } else {
+                console.log('\n<size> should be a number greater than or equal to <n>');
+                printUsage();
+            }
+        } else {
+            s = n;
+        }
+        if (n !== undefined && s !== undefined) {
+            console.log(h_tree.create(n, s));
+        }
+    } else {
+        console.log('\n<n> should be a number greater than or equal to 0');
+        printUsage();
+    }
+} else {
+    printUsage();
+}

@@ -1,6 +1,6 @@
 {
   "name": "h-tree-cli",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Print the H-Tree fractal to the console!",
   "main": "./src/index.js",
   "bin": {
